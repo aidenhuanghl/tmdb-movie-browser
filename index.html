@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>热门电影浏览器</title>
-    <link rel="stylesheet" href="style.css"> <!-- 链接 CSS 文件 -->
+    <title>电影浏览器</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>当前热门电影</h1>
+        <h1>电影浏览器</h1>
+        <!-- Search Form Added -->
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="搜索电影名称..." required>
+            <button type="submit">搜索</button>
+        </form>
     </header>
 
     <main id="movies-grid">
-        <p class="loading">正在加载电影...</p> <!-- 初始加载提示 -->
+        <!-- Initial message or loading indicator -->
+        <p class="info-message">请输入关键词搜索电影，或浏览下方热门电影。</p>
+        <p class="loading" style="display: none;">正在加载电影...</p>
     </main>
 
-    <div class="pagination">
+    <!-- Pagination controls, initially hidden -->
+    <div class="pagination" style="display: none;">
         <button id="prev-button" disabled>上一页</button>
         <span id="page-info">页码: 1</span>
         <button id="next-button" disabled>下一页</button>
@@ -26,6 +34,6 @@
         <p>数据来源: The Movie Database (TMDb)</p>
     </footer>
 
-    <script src="script.js"></script> <!-- 链接 JavaScript 文件 -->
+    <script src="script.js"></script>
 </body>
 </html>

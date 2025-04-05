@@ -7,14 +7,52 @@ body {
 }
 
 header {
-    background: #0d253f; /* TMDb 蓝色 */
+    background: #0d253f; /* TMDb blue */
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem 0 1.5rem 0; /* Added bottom padding */
     text-align: center;
 }
 
+header h1 {
+    margin-bottom: 1rem; /* Space below title */
+}
+
+/* --- Search Form Styles --- */
+.search-form {
+    text-align: center;
+}
+
+.search-form input[type="text"] {
+    padding: 0.6rem;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    vertical-align: middle;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.search-form button {
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color: #01b4e4; /* TMDb light blue */
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-left: -1px; /* Overlap slightly */
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+.search-form button:hover {
+    background-color: #0d253f; /* Dark blue */
+}
+
+
 main {
-    max-width: 1200px; /* 列表页更宽 */
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 1rem;
 }
@@ -32,19 +70,17 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    transition: transform 0.2s ease-in-out; /* Add hover effect */
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Added link styling for cards */
 #movies-grid a {
     text-decoration: none;
     color: inherit;
 }
 
 #movies-grid a:hover .movie-card {
-    transform: scale(1.03); /* Slight zoom on hover */
+    transform: scale(1.03);
 }
-
 
 .movie-card img {
     max-width: 100%;
@@ -56,8 +92,8 @@ main {
     font-size: 1rem;
     margin: 0.8rem 0.5rem;
     color: #333;
-    min-height: 3em; /* Ensure space for longer titles */
-    display: -webkit-box; /* Enable ellipsis for long titles */
+    min-height: 3em;
+    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -66,18 +102,16 @@ main {
     font-size: 0.9em;
     font-weight: bold;
     color: #fff;
-    background-color: #f5c518; /* IMDb yellow-like */
+    background-color: #f5c518;
     padding: 0.2em 0.5em;
     border-radius: 4px;
     display: inline-block;
     margin-bottom: 0.8rem;
 }
 
-/* --- Loading / Error Styles --- */
-.loading, .error {
-    /* For Grid */
-    grid-column: 1 / -1; /* Span all columns if inside grid */
-    /* General */
+/* --- Info/Loading/Error Styles --- */
+.info-message, .loading, .error {
+    grid-column: 1 / -1;
     text-align: center;
     padding: 2rem;
     color: #555;
@@ -108,9 +142,8 @@ main {
 }
 
 .pagination button:hover:not(:disabled) {
-     background-color: #01b4e4; /* TMDb light blue */
+     background-color: #01b4e4;
 }
-
 
 .pagination button:disabled {
     cursor: not-allowed;
@@ -131,5 +164,5 @@ footer {
     font-size: 0.9em;
 }
 
-/* --- Detail Page Styles (can be in a separate file or here) --- */
+/* --- Detail Page Styles (also needed here if not linked separately) --- */
 /* Styles defined in detail.html's <style> tag are used */
