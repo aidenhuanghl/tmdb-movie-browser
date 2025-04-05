@@ -1,0 +1,77 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background: #0d253f; /* TMDb 蓝色 */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+#movies-grid {
+    display: grid;
+    /* 创建自适应列，每列最小 180px，最大 1fr (均分剩余空间) */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem; /* 列和行之间的间隙 */
+}
+
+.movie-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* 隐藏超出部分，确保圆角效果 */
+    text-align: center;
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto; /* 保持图片比例 */
+    display: block; /* 移除图片底部的空白 */
+}
+
+.movie-card h3 {
+    font-size: 1rem;
+    margin: 0.8rem 0.5rem;
+    color: #333;
+    min-height: 3em; /* 给标题留出至少两行的高度 */
+}
+.movie-card .rating {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f5c518; /* 类似 IMDb 的黄色 */
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    display: inline-block; /* 让背景色只包裹文字 */
+    margin-bottom: 0.8rem;
+}
+
+
+.loading, .error {
+    grid-column: 1 / -1; /* 让提示信息横跨所有列 */
+    text-align: center;
+    padding: 2rem;
+    color: #555;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    color: #666;
+    font-size: 0.9em;
+}
