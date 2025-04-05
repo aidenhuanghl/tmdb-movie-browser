@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影详情</title>
+    <!-- 可以复用主页面的 CSS，或者单独写 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 可以添加一些详情页特定的样式 */
+        .movie-detail { padding: 1rem; max-width: 900px; margin: 2rem auto; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .movie-detail img.poster { max-width: 250px; float: left; margin-right: 1.5rem; margin-bottom: 1rem; border-radius: 8px;}
+        .movie-detail .genres span { background-color: #eee; padding: 0.2em 0.5em; border-radius: 4px; margin-right: 5px; font-size: 0.9em; display: inline-block; margin-bottom: 5px;}
+        .back-link { display: block; margin-top: 1.5rem; text-align: center; text-decoration: none; color: #0d253f; font-weight: bold; }
+        .detail-content { overflow: hidden; } /* Clear the float */
+        .detail-content h2 { margin-top: 0; }
+        .detail-content h3 { margin-top: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.3rem;}
+
+        /* Simple clearing for floated poster */
+         .movie-detail::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="movie-title">电影详情</h1>
+    </header>
+    <main>
+        <div id="detail-container" class="movie-detail">
+            <p class="loading">正在加载详情...</p>
+            <!-- 电影详情将填充到这里 -->
+        </div>
+        <a href="index.html" class="back-link">返回列表</a>
+    </main>
+    <footer>
+         <p>数据来源: The Movie Database (TMDb)</p>
+    </footer>
+    <script src="detail.js"></script> <!-- 引入新的 JS 文件 -->
+</body>
+</html>

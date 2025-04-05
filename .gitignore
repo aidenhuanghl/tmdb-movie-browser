@@ -1,1 +1,18 @@
-.vercel
+# Environment variables
+.env
+*.env.local
+*.env.*.local
+
+# Node dependencies
+node_modules/
+
+# Vercel deployment metadata
+.vercel/
+
+# Mac OS folder attributes
+.DS_Store
+
+# Optional: Build output directory (if you were using a build step)
+# dist/
+# build/
+# .next/
