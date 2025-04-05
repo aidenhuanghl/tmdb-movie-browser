@@ -3,7 +3,7 @@
 // 使用 node-fetch 发送请求 (Vercel 环境内置或需要安装)
 // 在较新 Node.js 版本 (Vercel 支持) 中，可以直接用全局 fetch
 // 为了兼容性，我们用 node-fetch (如果本地测试需要 npm install node-fetch)
-import fetch from 'node-fetch'; // 或者如果 Vercel 环境支持全局 fetch，可能不需要这行
+//import fetch from 'node-fetch'; // 或者如果 Vercel 环境支持全局 fetch，可能不需要这行
 
 // 从环境变量读取 API Key (这是安全的方式!)
 const apiKey = process.env.TMDB_API_KEY;
